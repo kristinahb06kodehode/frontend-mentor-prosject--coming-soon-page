@@ -1,0 +1,185 @@
+/* - Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-left: 10em;
+}
+
+main article h1 {
+  margin-top: 70px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  letter-spacing: 18px;
+  color: hsl(0, 6%, 24%);
+}
+
+.left-section {
+  display: grid;
+  grid-template-rows: 0.4 1fr 1fr;
+  margin-top: 2em;
+}
+
+main h1 span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+main article:first-child {
+  text-align: center;
+  padding: 0 1.5rem 2rem;
+}
+
+main article:first-child p {
+  color: hsl(0, 36%, 70%);
+  line-height: 1.6;
+}
+.small-screen-logo {
+  display: none;
+}
+main article picture img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+main article .error {
+}
+
+form {
+  display: grid;
+  position: relative;
+}
+
+form input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 30px;
+  width: 100%;
+  color: hsl(0, 36%, 70%);
+}
+
+form input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+/* beginning of code that breaks*/
+form label {
+  position: absolute;
+  top: 35%;
+  transform: translateY(35%);
+  right: 5.5rem;
+  display: none;
+}
+
+form button {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: 90px;
+  height: 46px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 2px 12px 20px hsl(0, 36%, 70%);
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-image: linear-gradient(135deg, hsl(0, 62%, 90%), hsl(0, 79%, 81%));
+  box-shadow: 0px 12px 30px hsl(0, 36%, 70%);
+}
+/* end of code that breaks*/
+
+.error {
+  color: hsl(0, 93%, 68%) !important;
+  text-align: left;
+  margin-top: 0.5rem;
+  display: none;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url("images/bg-pattern-desktop.svg") no-repeat center/cover;
+  }
+
+  main {
+    height: 100vh;
+  }
+
+  main article picture img {
+    height: 100vh;
+  }
+
+  main article:first-child {
+    text-align: left;
+  }
+
+  .logo {
+    display: block;
+    margin-top: 40px;
+  }
+
+  main h1 {
+    font-size: 4rem;
+    width: 500px;
+  }
+
+  main article:first-child p {
+    width: 500px;
+  }
+
+  form input {
+    width: 500px;
+  }
+
+  form label {
+    right: 312px;
+  }
+
+  form button {
+    right: 225px;
+  }
+}
